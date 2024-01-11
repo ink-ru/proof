@@ -1,0 +1,76 @@
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(12px + 1vmin);
+}
+
+/* ========================================================================= */
+dialog
+{
+  box-shadow: 1ex 1ex grey;
+  border-radius: 1ex;
+  border: 1px solid silver;
+  position: fixed;
+  display: none;
+  top: .1vmin;
+}
+
+dialog *
+{
+  display: inline-block;
+}
+
+dialog::backdrop {
+  background: none;
+  opacity: 0;
+}
+
+dialog form {
+  text-align: center;
+}
+dialog figure {
+  text-align: center;
+}
+
+dialog figure figcaption {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.4ex;
+}
+
+dialog figure p,
+dialog form label {
+  padding: .4ex;
+}
+
+#dialogInput, dialog:has(form > #dialogInput:checked)
+{
+      display: none;
+}
+
+[for="dialogInput"]
+{
+  appearance: button;
+  background-color: silver;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+[for="dialogInput"]:hover
+{
+  background-color: Gainsboro;
+  border-color: DarkGray;
+}
+
+/* ========================================================================= */
+
+header center {
+  margin: 1em;
+  padding: 1em;
+}
+
+details {
+  margin-left: 1ex;
+  padding-left: 1ex;
+}
